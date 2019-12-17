@@ -7,4 +7,6 @@ dependencies :
 
 instructions to capture the details of the user:
 
-run python dataset_capture.py
+1) Clone the repository
+2) have installed the above libraries using pip
+3) run python dataset_capture.py
