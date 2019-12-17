@@ -5,6 +5,11 @@ dependencies :
 2) opencv >= 3.4
 3) xmlwrite, xmlrd
 
+List of things this repo currently does:
+
+1) Performs face detection in the current frame and saves the detected face images into a user directory
+
+
 instructions to capture the details of the user:
 
 1) Clone the repository
