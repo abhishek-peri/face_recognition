@@ -4,6 +4,8 @@ dependencies :
 1) python 2.7 or >
 2) opencv >= 3.4
 3) xmlwrite, xmlrd
+4) numpy
+5) PIL (python image library)
 
 List of things this repo currently does:
 
