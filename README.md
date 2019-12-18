@@ -3,7 +3,7 @@
 dependencies :
 1) python 2.7 or >
 2) opencv >= 3.4
-3) xmlwrite, xmlrd
+3) xmlwt, xmlrd, xmlutils
 4) numpy
 5) PIL (python image library)
 
