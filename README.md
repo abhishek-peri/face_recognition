@@ -22,5 +22,5 @@ After asserting data is captured:
 
 1) Create a new directory named 'training'
 2) run python training_dataSet.py
-3) run python recogniser.py
+3) run python recognizer.py
 
