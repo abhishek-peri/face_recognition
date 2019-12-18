@@ -18,3 +18,9 @@ instructions to capture the details of the user:
 4) enter the user id when prompted(a numerical value will suffice like 1 or 2)
 5) wait for the face data to be captured and saved in the newly created dataset folder
 
+After asserting data is captured:
+
+1) Create a new directory named 'training'
+2) run python training_dataSet.py
+3) run python recogniser.py
+
