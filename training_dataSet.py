@@ -2,7 +2,8 @@ import os,cv2;
 import numpy as np
 from PIL import Image;
 
-recognizer = cv2.face.LBPHFaceRecognizer_create()
+#recognizer = cv2.face.LBPHFaceRecognizer_create()
+recognizer = cv2.face.EigenFaceRecognizer_create()
 detector= cv2.CascadeClassifier('haarcascade_frontalface_default.xml');
 
 def getImagesAndLabels(path):
@@ -24,7 +25,8 @@ def getImagesAndLabels(path):
         faces=detector.detectMultiScale(imageNp)
         #If a face is there then append that in the list as well as Id of it
         for (x,y,w,h) in faces:
-            faceSamples.append(imageNp[y:y+h,x:x+w])
+            #faceSamples.append(imageNp[y:y+h,x:x+w])
+            faceSamples.append(cv2.resize(imageNp[y:y+h,x:x+w],(150,150)))
             Ids.append(Id)
     return faceSamples,Ids
 
