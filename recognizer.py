@@ -7,7 +7,8 @@ start=time.time()
 period=20
 face_cas = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 cap = cv2.VideoCapture(0);
-recognizer = cv2.face.LBPHFaceRecognizer_create();
+#recognizer = cv2.face.LBPHFaceRecognizer_create();
+recognizer = cv2.face.EigenFaceRecognizer_create()
 recognizer.read('trainer/trainer.yml');
 flag = 0;
 id=0;
@@ -22,7 +23,8 @@ while True:
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY);
     faces = face_cas.detectMultiScale(gray, 1.3, 7);
     for (x,y,w,h) in faces:
-        roi_gray = gray[y:y + h, x:x + w]
+        #roi_gray = gray[y:y + h, x:x + w]
+        roi_gray = cv2.resize(gray[y:y + h, x:x + w],(150,150))
         cv2.rectangle(img, (x,y), (x+w, y+h), (255,0,0),2);
         id,conf=recognizer.predict(roi_gray)
         print("conf : {}".format(conf))
